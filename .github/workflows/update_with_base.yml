@@ -48,7 +48,7 @@ jobs:
           echo "Found new commits"
           
           echo "Merging from ${{ env.REMOTE_NAME }}/${{ env.REMOTE_BRANCH }}"
-          git merge --ff-only ${{ env.REMOTE_NAME }}/${{ env.REMOTE_BRANCH }}
+          git merge --ff ${{ env.REMOTE_NAME }}/${{ env.REMOTE_BRANCH }}
           
           echo "Pushing changes"
           git push
