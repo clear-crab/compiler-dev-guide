@@ -56,6 +56,7 @@
     - [RISC-V](notification-groups/risc-v.md)
     - [Windows](notification-groups/windows.md)
 - [Licenses](./licenses.md)
+- [Editions](guides/editions.md)
 
 # High-level Compiler Architecture
 
