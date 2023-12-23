@@ -29,7 +29,7 @@ Note that this documentation mostly covers user-facing information. See
 - Stage 2: the truly current compiler
 - Stage 3: the same-result test
 
-Compiling `rustc` is done in stages. Here's a diagram, adapted from Joshua Nelson's
+Compiling `rustc` is done in stages. Here's a diagram, adapted from Jynn Nelson's
 [talk on bootstrapping][rustconf22-talk] at RustConf 2022, with detailed explanations below.
 
 The `A`, `B`, `C`, and `D` show the ordering of the stages of bootstrapping.
@@ -66,7 +66,8 @@ which `x.py` will download for you.
 (You can also configure `x.py` to use something else.)
 
 The stage0 compiler is then used only to compile `src/bootstrap`, `std`, and `rustc`.
-When compiling `rustc`, the stage0 compiler uses the freshly compiled `std`.
+When assembling the libraries and binaries that will become the stage1 `rustc`
+compiler, the freshly compiled `std` and `rustc` are used.
 There are two concepts at play here:
 a compiler (with its set of dependencies)
 and its 'target' or 'object' libraries (`std` and `rustc`).
